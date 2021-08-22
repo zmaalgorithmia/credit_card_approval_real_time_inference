@@ -31,11 +31,14 @@ ALGORITHM_SETTINGS = {
     'environment': 'cpu'
 }
 
+sample_input = {"high_balance": 0, "owns_home": 1, "child_one": 0, "child_two_plus": 0, "has_work_phone": 0, "age_high": 0, "age_highest": 1, "age_low": 0, "age_lowest": 0, "employment_duration_high": 0, "employment_duration_highest": 0, "employment_duration_low": 0, "employment_duration_medium": 0, "occupation_hightech": 0, "occupation_office": 1, "family_size_one": 1,
+                "family_size_three_plus": 0, "housing_coop_apartment": 0, "housing_municipal_apartment": 0, "housing_office_apartment": 0, "housing_rented_apartment": 0, "housing_with_parents": 0, "education_higher_education": 0, "education_incomplete_higher": 0, "education_lower_secondary": 0, "marital_civil_marriage": 0, "marital_separated": 0, "marital_single_not_married": 1, "marital_widow": 0}
+
 
 # config your publish settings as per https://docs.algorithmia.com/#publish-an-algorithm
 ALGORITHM_VERSION_INFO = {
     "release_notes": "Automatically created, deployed and published from Jenkins.",
-    "sample_input": "data://zma/credit_card_approval/credit_card_applications.csv",
+    "sample_input": sample_input,
     "version_type": "minor"
 }
 
@@ -47,8 +50,8 @@ MODEL_FILE = 'model-a.joblib'
 
 
 # if you need to update the contents of algo.py during deployment, do so here
-def UPDATE_ALGORITHM_TEMPLATE(file_contents):
-    return file_contents.replace('data://username/demo/'+MODEL_FILE, data_path+'/'+MODEL_FILE)
+# def UPDATE_ALGORITHM_TEMPLATE(file_contents):
+#     return file_contents.replace('data://username/demo/'+MODEL_FILE, data_path+'/'+MODEL_FILE)
 
 
 # --------- REQUIRED ENVIRONMENT VARIABLES ----------
@@ -130,9 +133,9 @@ print(f"Copied README.md to {tmpdir}/README.md")
 # Update the algorithm (replacing template values)
 algo_template = f"{ALGO_TEMPLATE_PATH}algo.py"
 algo_to_push = f"{tmpdir}/src/{algorithm_file_name}"
-with open(algo_template, 'r+') as file_in:
-    with open(algo_to_push, 'w+') as file_out:
-        file_out.write(UPDATE_ALGORITHM_TEMPLATE(file_in.read()))
+# with open(algo_template, 'r+') as file_in:
+#     with open(algo_to_push, 'w+') as file_out:
+#         file_out.write(UPDATE_ALGORITHM_TEMPLATE(file_in.read()))
 print(f"Wrote algorithm file '{algo_to_push}' from template '{algo_template}'")
 
 cloned_repo.git.add(all=True)
