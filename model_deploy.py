@@ -51,8 +51,8 @@ MODEL_FILE = 'model-a.joblib'
 
 
 # if you need to update the contents of algo.py during deployment, do so here
-# def UPDATE_ALGORITHM_TEMPLATE(file_contents):
-#     return file_contents.replace('data://username/demo/'+MODEL_FILE, data_path+'/'+MODEL_FILE)
+def UPDATE_ALGORITHM_TEMPLATE(file_contents):
+    return file_contents.replace('data://username/demo/'+MODEL_FILE, data_path+'/'+MODEL_FILE)
 
 
 # --------- REQUIRED ENVIRONMENT VARIABLES ----------
@@ -134,9 +134,9 @@ print(f"Copied README.md to {tmpdir}/README.md")
 # Update the algorithm (replacing template values)
 algo_template = f"{ALGO_TEMPLATE_PATH}algo.py"
 algo_to_push = f"{tmpdir}/src/{algorithm_file_name}"
-# with open(algo_template, 'r+') as file_in:
-#     with open(algo_to_push, 'w+') as file_out:
-#         file_out.write(UPDATE_ALGORITHM_TEMPLATE(file_in.read()))
+with open(algo_template, 'r+') as file_in:
+    with open(algo_to_push, 'w+') as file_out:
+        file_out.write(UPDATE_ALGORITHM_TEMPLATE(file_in.read()))
 print(f"Wrote algorithm file '{algo_to_push}' from template '{algo_template}'")
 
 cloned_repo.git.add(all=True)
