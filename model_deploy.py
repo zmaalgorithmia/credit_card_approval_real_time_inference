@@ -6,6 +6,7 @@ from shutil import copyfile
 from six.moves.urllib.parse import quote_plus
 from tempfile import mkdtemp
 from time import sleep
+import json
 
 # --------- Algorithm name and metatadata ---------
 #
@@ -38,7 +39,7 @@ sample_input = {"high_balance": 0, "owns_home": 1, "child_one": 0, "child_two_pl
 # config your publish settings as per https://docs.algorithmia.com/#publish-an-algorithm
 ALGORITHM_VERSION_INFO = {
     "release_notes": "Automatically created, deployed and published from Jenkins.",
-    "sample_input": sample_input,
+    "sample_input": json.dumps(sample_input),
     "version_type": "minor"
 }
 
