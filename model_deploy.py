@@ -11,7 +11,7 @@ from time import sleep
 #
 
 # The algorithm will be created under https://{ALGORITHMIA_ENDPOINT}/algorithms/[YOUR_USERNAME]
-ALGO_NAME = 'credit_card_approval_serial_batch'
+ALGO_NAME = 'credit_card_approval_real_time_inference'
 
 # The data collection will be created at https://{ALGORITHMIA_ENDPOINT}/data/{COLLECTION_NAME}
 # We use the algoritm name as the collection name here, but it could be any legal name
@@ -19,7 +19,7 @@ COLLECTION_NAME = f"{ALGO_NAME}"
 
 # Config your algorithm details/settings as per https://docs.algorithmia.com/#create-an-algorithm
 ALGORITHM_DETAILS = {
-    'label': 'Credit Card Approval - Serial Batch',
+    'label': 'Credit Card Approval - Real-Time Inference',
     'tagline': 'Predict credit card approvals and risk scores using gradient boosting and random forrest classifiers.'
 }
 ALGORITHM_SETTINGS = {
@@ -40,7 +40,7 @@ ALGORITHM_VERSION_INFO = {
 }
 
 # path within this repo where the algo.py, requirements.txt, and model file are located
-ALGO_TEMPLATE_PATH = 'credit_card_approval_serial_batch/'
+ALGO_TEMPLATE_PATH = 'credit_card_approval_real_time_inference/'
 
 # name of the model file to be uploaded to Hosted Data
 MODEL_FILE = 'model-a.joblib'
