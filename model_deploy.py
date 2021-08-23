@@ -41,7 +41,7 @@ ALGORITHM_VERSION_INFO = {
     "release_notes": "Automatically created, deployed and published from Jenkins.",
     "sample_input": json.dumps(sample_input),
     "version_type": "minor",
-    "insights_enabled": True
+    "insights_enabled": "true"
 }
 
 # path within this repo where the algo.py, requirements.txt, and model file are located
@@ -155,7 +155,7 @@ try:
     results = algo.publish(
         settings={
             "algorithm_callability": "private",
-            "insights_enabled": True
+            "insights_enabled": "true"
         },
         version_info=ALGORITHM_VERSION_INFO,
         details=ALGORITHM_DETAILS
