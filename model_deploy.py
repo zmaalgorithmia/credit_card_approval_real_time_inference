@@ -40,7 +40,8 @@ sample_input = {"high_balance": 0, "owns_home": 1, "child_one": 0, "child_two_pl
 ALGORITHM_VERSION_INFO = {
     "release_notes": "Automatically created, deployed and published from Jenkins.",
     "sample_input": json.dumps(sample_input),
-    "version_type": "minor"
+    "version_type": "minor",
+    "insights_enabled": True
 }
 
 # path within this repo where the algo.py, requirements.txt, and model file are located
