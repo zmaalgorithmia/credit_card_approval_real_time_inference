@@ -165,7 +165,7 @@ except:
         sleep(60)
         results = algo.publish(
             settings={
-                "algorithm_callability": "private"
+                "algorithm_callability": "public"
             },
             version_info=ALGORITHM_VERSION_INFO,
             details=ALGORITHM_DETAILS
