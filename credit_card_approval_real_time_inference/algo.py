@@ -17,10 +17,6 @@ model = load(client.file(
 
 def apply(input):
 
-    print("DEBUG with print: age_highest: ", str(input.get("age_highest", 1)))
-    logging.info("DEBUG with logging: age_highest: " +
-                 str(input.get("age_highest", 1)))
-
     ##########################
     # Processing input data #
     ##########################
