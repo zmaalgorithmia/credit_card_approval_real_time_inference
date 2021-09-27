@@ -1,18 +1,18 @@
 import Algorithmia
-import os
 import numpy as np
 import time
 from joblib import load
-
-# DEBUG
-import logging
 
 
 client = Algorithmia.client()
 
 # Model version A - Gradient boosting classifier
+# model = load(client.file(
+#     "data://zma/credit_card_approval/model-a.joblib").getFile().name)
+
+# Model version B - Random forrest classifier
 model = load(client.file(
-    "data://zma/credit_card_approval/model-a.joblib").getFile().name)
+    "data://zma/credit_card_approval/model-b.joblib").getFile().name)
 
 
 def apply(input):
