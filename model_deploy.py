@@ -176,5 +176,5 @@ except:
             'ERROR: unable to publish Algorithm: code will not compile, or compile takes too long\n{}'.format(x))
 
 print(results)
-print(
-    f"DEPLOYED version {results.version_info.semantic_version} to {algo_endpoint}/algorithms/{algo_full_name}")
+# print(
+#     f"DEPLOYED version {results.version_info.semantic_version} to {algo_endpoint}/algorithms/{algo_full_name}")
