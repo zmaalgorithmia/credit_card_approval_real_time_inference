@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-algorithmia>=1.4.0
-=======
 algorithmia==1.14.0
->>>>>>> 90248fb36ba7f35f9d9a0330f81b6acc43e55c0d
 gitpython>=2.1.0
 six>=1.12.0
 joblib
