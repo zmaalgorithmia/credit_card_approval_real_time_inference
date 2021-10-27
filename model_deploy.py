@@ -42,7 +42,7 @@ ALGORITHM_VERSION_INFO = {
     "release_notes": "Automatically created, deployed and published from Jenkins.",
     "sample_input": json.dumps(sample_input),
     "version_type": "minor",
-    "insights_enabled": "true"
+    "insights_enabled": True,
 }
 
 # path within this repo where the algo.py, requirements.txt, and model file are located
@@ -66,8 +66,8 @@ def UPDATE_ALGORITHM_TEMPLATE(file_contents):
 #
 # ALGORITHMIA_USERNAME - self explanatory
 #
-api_key = environ.get('ALGORITHMIA_API_KEY')
-algo_domain = environ.get('ALGORITHMIA_DOMAIN')
+api_key = environ.get('ALGORITHMIA_API_KEY_JENKINS')
+algo_domain = environ.get('ALGORITHMIA_API_JENKINS')
 algo_endpoint = f"https://{algo_domain}"
 username = environ.get('ALGORITHMIA_USERNAME')
 if not api_key:
@@ -176,5 +176,5 @@ except:
             'ERROR: unable to publish Algorithm: code will not compile, or compile takes too long\n{}'.format(x))
 
 print(results)
-print(
-    f"DEPLOYED version {results.version_info.semantic_version} to {algo_endpoint}/algorithms/{algo_full_name}")
+# print(
+#     f"DEPLOYED version {results.version_info.semantic_version} to {algo_endpoint}/algorithms/{algo_full_name}")
