@@ -89,7 +89,7 @@ def apply(input):
             adverse_action_reasons['no employment'] = 1
 
         # Store adverse action reasons in built-in storage
-        file_path = "data://zma/credit_card_approval/adverse_action_reasons_" + \
+        file_path = "data://zma/credit_card_approval_arr/adverse_action_reasons_" + \
             str(time.time()) + ".json"
         client.file(file_path).putJson(adverse_action_reasons)
 
