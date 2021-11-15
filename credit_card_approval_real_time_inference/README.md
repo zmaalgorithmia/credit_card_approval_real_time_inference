@@ -12,9 +12,9 @@ Framework: scikit-learn
 
 Model Type: Gradient boosting classifier
 
-GitHub Link: https://github.com/algorithmiaio/demos/tree/master/credit-card-approval
+GitHub Link: https://github.com/zmaalgorithmia/jenkins_credit_card_approval_real_time_inference
 
-Demo Link: https://demo.productionize.ai/algorithms/AlgorithmiaSE/CreditCardApproval
+Demo Link: https://algosales.productionize.ai/algorithms/zma/jenkins_credit_card_approval_real_time_inference
 
 ### Overview
 
@@ -213,6 +213,6 @@ The `prepare.py` script was then used to prepare the data.
 
 ### Train model
 
-The `train-a.ipynb` and `train-b.ipynb` notebooks were used to train a gradient
+The `model-a_training.ipynb` and `model-b_training.ipynb` notebooks were used to train a gradient
 boosting classifier and a random forest classifier, respectively, using
 scikit-learn.
