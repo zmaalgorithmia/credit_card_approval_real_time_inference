@@ -98,5 +98,3 @@ However, if you already have an Algorithm published and wish to redeploy it unde
 For those using another CI/CD tool, or who simply wish to deploy from a simple pure-Python script, the Python scripts used in this repo can be used in any Python-capable environment; they are not Jenkins-specific. Simply copy and modify the model_*.py files from this repo, then and modify them to point to your own Algorithm.
 
 Note that a [GitHub Actions example](../githubactions_deploy_algorithmia) is also available.
-
-Testing Jenkins Webhooks. 
