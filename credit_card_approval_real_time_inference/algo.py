@@ -8,7 +8,7 @@ client = Algorithmia.client()
 
 # Model version A - Gradient boosting classifier
 model = load(client.file(
-    "data://zma/credit_card_approval_real_time_inference/model-a.joblib").getFile().name)
+    "data://zma/credit_card_approval_real_time_inference/model-b.joblib").getFile().name)
 
 # Model version B - Random forrest classifier
 # model = load(client.file(
