@@ -206,7 +206,7 @@ Downloaded data files from https://www.kaggle.com/rikdifos/credit-card-approval-
 * application_record.csv
 * credit_record.csv
 
-and place them in a hosted data collection, `AlgorithmiaSE/CreditCardApproval`
+and place them in a hosted data collection, `data://zma/credit_card_approval_real_time_inference`
 in this case.
 
 The `prepare.py` script was then used to prepare the data.
